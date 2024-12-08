@@ -30,17 +30,20 @@ public class UserController
 	public ModelAndView Register()
 	{
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("Resgister");
+		mv.setViewName("Register");
 		return mv;
 	}
 	
-	@GetMapping("userhome")
-	public ModelAndView userhome()
+	@GetMapping("/userhome")
+	public ModelAndView userhome() 
 	{
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("userhome");
-		return mv;
+	    ModelAndView mv = new ModelAndView();
+	    mv.setViewName("userhome");
+	    return mv;
 	}
+
+	
+	
 	
 	@GetMapping("userprofile")
 	public ModelAndView userprofile()
@@ -96,31 +99,29 @@ public class UserController
 		return mv;
 	}
 	
-	@PostMapping("/checkuserlogin")
-	public ModelAndView checkuserlogin(HttpServletRequest request)
-	{
-		ModelAndView mv = new ModelAndView();
-		
-		String uemail = request.getParameter("uemail");
-		String upwd = request.getParameter("upwd");
-		
-		User user = userService.checkUserLogin(uemail, upwd);
-		
-		if(user != null)
-		{
-			HttpSession session = request.getSession();
-			session.setAttribute("user", user); // customer is the session object
-			
-			mv.setViewName("userhome"); //Login Success
-		}
-		else
-		{
-			mv.setViewName("Login");
-			mv.addObject("message", "Login Failed");
-		}
-		
-		return mv;
+	@PostMapping("checkuserlogin")
+	public ModelAndView checkuserlogin(HttpServletRequest request) {
+	    ModelAndView mv = new ModelAndView();
+	    
+	    String uemail = request.getParameter("uemail");
+	    String upwd = request.getParameter("upwd");
+	    
+	    User user = userService.checkUserLogin(uemail, upwd);
+	    
+	    if (user != null) {
+	        HttpSession session = request.getSession();
+	        session.setAttribute("user", user); 
+	        
+	        mv.setViewName("userhome");
+	    } else {
+	        mv.setViewName("Login");
+	        mv.addObject("message", "Login Failed");
+	    }
+	    
+	    return mv;
 	}
+
+
 	
 	@GetMapping("userlogout")
 	public ModelAndView userlogout()

@@ -1,5 +1,9 @@
+<%@page import="com.mvr.jfsd.springboot.model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%    
+User u = (User) session.getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +31,9 @@
     <nav id="navbar" class="header__nav collapse">
       <ul class="header__elenco">
         <li class="header__el"><a href="#" class="header__link">Home</a></li>
-        <li class="header__el"><a href="pricing.jsp" class="header__link">Pricing</a></li>
+        <li class="header__el"><a href="Payment.jsp" class="header__link">Pricing</a></li>
         <li class="header__el"><a href="#" class="header__link">Services</a></li>
-        <li class="header__el"><a href="#" class="header__link">Expert Team</a></li>
+        <li class="header__el"><a href="Forum.jsp" class="header__link">Forum</a></li>
         <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
         <li class="header__el header__el--blue"><a href="" class="btn btn--white">PROFILE →</a></li>
       </ul>
@@ -38,313 +42,14 @@
     </div>
 </header>
 
-<div class="sect sect--padding-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-    <div class="site">
-      <h1 class="site__title">Evolve And Integrate with the Real Map</h1>
-      <h2 class="site__subtitle">Manage City like a boss</h2>
-      
-      <div class="carousel">
-  <div class="carousel__wrapper">
-    <div class="carousel__slide">
-    <p>Smart City Guide</p>
-      <img src="https://im.hunt.in/cg/Coimbatore/City-Guide/landscape-smart-cities.jpg" alt="Slide 1 Image">
-      <h1>Empowering Newcomers</h1>
-      <p>Our Smart City Project provides essential information and resources for newcomers, helping them navigate their new environment with ease.</p>
-      <a href="Maps.jsp" class="carousel__btn-readmore">Read More</a>
-    </div>
-    <div class="carousel__slide">
-    <p>Accommodation</p>
-      <img src="https://nationaldeafcenter.org/wp-content/uploads/2018/06/Accommodations.webp" alt="Slide 2 Image">
-      <h1>Find Your Stay</h1>
-      <p>Discover available hotels and rental facilities to ensure a comfortable stay in the city.</p>
-      <a href="Maps.jsp" class="carousel__btn-readmore">Read More</a>
-    </div>
-    <div class="carousel__slide">
-    <p>Transportation</p>
-      <img src="https://media.licdn.com/dms/image/D4D12AQE8OQ-f4vGViA/article-cover_image-shrink_600_2000/0/1674731857740?e=2147483647&v=beta&t=2ujtYdpuOv2Zi_mE2-084vX3LxhHl_PalS0dp2Ppg1w" alt="Slide 3 Image">
-      <h1>Navigate with Ease</h1>
-      <p>Access public transportation options to move efficiently across the city.</p>
-      <a href="Maps.jsp" class="carousel__btn-readmore">Read More</a>
-    </div>
-    <div class="carousel__slide">
-    <p>Healthcare Services</p>
-      <img src="https://media.licdn.com/dms/image/C4D12AQGa4DdPqIk28w/article-cover_image-shrink_600_2000/0/1606483197650?e=2147483647&v=beta&t=OqU3nfKNE4CkKm_4Ac-1UpLe4Jr9qCrhrtZSlQvZbyo" alt="Slide 3 Image">
-      <h1>Your Health Matters</h1>
-      <p>Find local healthcare facilities and emergency services to prioritize your well-being.</p>
-      <a href="Maps.jsp" class="carousel__btn-readmore">Read More</a>
-    </div>
-    <div class="carousel__slide">
-    <p>Shopping Landmarks</p>
-      <img src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/bh2lf78dynxtpxfn0dve/header-photo" alt="Slide 1 Image">
-      <h1>Explore Local Markets</h1>
-      <p>Experience the city's shopping districts and local markets for a fulfilling retail adventure.</p>
-      <a href="Maps.jsp" class="carousel__btn-readmore">Read More</a>
-    </div>
-  </div>
-  <button class="carousel__btn carousel__btn--prev">‹</button>
-  <button class="carousel__btn carousel__btn--next">›</button>
-</div>
-&nbsp;&nbsp;&nbsp;
+
 
       
-      <div class="site__box-link">
-        <a class="btn btn--width" href="">Pricing</a>
-        <a class="btn btn--revert btn--width" href="">Contact</a>
-      </div>
-      <img class="site__img" src="https://image.ibb.co/c7grYb/image3015.png">
-    </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="sect sect--padding-bottom">
-<div class="container">
-<div class="row row--center">
-  <h1 class="row__title">
-    Pricing
-  </h1>
-  <h2 class="row__sub">What fits your business the best?</h2>
-</div>
-<div class="row row--center row--margin">
-  <div class="col-md-4 col-sm-4 price-box price-box--purple">
-    <div class="price-box__wrap">
-      <div class="price-box__img"></div>
-      <h1 class="price-box__title">
-        Community
-      </h1>
-      <p class="price-box__people">
-        Small Towns & Communities
-      </p>
-      <h2 class="price-box__discount">
-        <span class="price-box__dollar">&#8377;</span>50<span class="price-box__discount--light">/month</span>
-      </h2>
-      <h3 class="price-box__price">
-        &#8377;100/mo
-      </h3>
-      <p class="price-box__feat">
-        Features
-      </p>
-      <ul class="price-box__list">
-        <li class="price-box__list-el">1 License</li>
-        <li class="price-box__list-el">Basic map navigation</li>
-        <li class="price-box__list-el">Landmarks and POI management</li>
-        <li class="price-box__list-el">5 service integrations (e.g., healthcare, transportation)</li>
-      </ul>
-       <div class="price-box__btn">
-      <a class="btn btn--purple btn--width">Start now</a>
-    </div>
-  </div>
-  </div>
-  <!-- second -->
-  <div class="col-md-4 col-sm-4 price-box price-box--violet">
-  <div class="price-box__wrap">
-      <div class="price-box__img"></div>
-      <h1 class="price-box__title">
-        City Navigator
-      </h1>
-      <p class="price-box__people">
-        Medium-sized Cities
-      </p>
-      <h2 class="price-box__discount">
-      <span class="price-box__dollar">&#8377;</span>250<span class="price-box__discount--light">/month</span>
-      </h2>
-      <h3 class="price-box__price">
-        &#8377;300/mo
-      </h3>
-      <p class="price-box__feat">
-        Features
-      </p>
-      <ul class="price-box__list">
-        <li class="price-box__list-el">3 License</li>
-        <li class="price-box__list-el">Advanced map navigation with real-time updates</li>
-        <li class="price-box__list-el">Analytics and reports on city metrics</li>
-        <li class="price-box__list-el">Unlimited service integrations</li>
-        <li class="price-box__list-el">Priority email support</li>
-      </ul>
-      <div class="price-box__btn">
-      <a class="btn btn--violet btn--width">Start now</a>
-    </div>
-  </div>
-  </div>
-
-<!-- terzo -->
-  <div class="col-md-4 col-sm-4 price-box price-box--blue">
-  <div class="price-box__wrap">
-      <div class="price-box__img"></div>
-      <h1 class="price-box__title">
-        Metropolitan
-      </h1>
-      <p class="price-box__people">
-        Large Cities & Corporations
-      </p>
-      <h2 class="price-box__discount">
-      <span class="price-box__dollar">&#8377;</span>600<span class="price-box__discount--light">/month</span>
-      </h2>
-      <h3 class="price-box__price">
-        &#8377;750/mo
-      </h3>
-      <p class="price-box__feat">
-        Features
-      </p>
-      <ul class="price-box__list">
-        <li class="price-box__list-el">5 License</li>
-        <li class="price-box__list-el">Customized city map integration</li>
-        <li class="price-box__list-el">Dedicated dashboards for analytics</li>
-        <li class="price-box__list-el">AI-based recommendations</li>
-        <li class="price-box__list-el">24/7 dedicated support</li>
-      </ul>
-    <div class="price-box__btn">
-      <a class="btn btn--blue btn--width">Start now</a>
-    </div>
-  </div>
-  </div>
-  
+    
   
 
-</div>
-</div>
-</div>
 
 
-<div class="sect sect--white">
-<div class="container">
-<div class="row">
-  <h1 class="row__title">
-    FEEDBACK
-  </h1>
-  <h2 class="row__sub">Most Top  <span class="row__sub--light">rated feedbacks</span> given by user</h2>
-</div>
-<div class="row row--margin row--text-center">
-  <div class="col-md-8 col-sm-10 col-xs-12 row__carousel">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <div class="item__content">
-      <img class="item__img" src="https://cdn.worldvectorlogo.com/logos/slack-1.svg" alt="Slack"><span class="item__name">slack</span>
-      <p class="item__description">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-      </p>
-        </div>
-      <div class="item__avatar"></div>
-      <p class="item__people">Josh Doe</p>
-  <p class="item__occupation">Ceo of Google</p>
-    </div>
-    
-        <div class="item">
-      <div class="item__content">
-      <img class="item__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Google-favicon-2015.png/150px-Google-favicon-2015.png" alt="Google"><span class="item__name">google</span>
-      <p class="item__description">
-         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-      </p>
-        </div>
-      <div class="item__avatar"></div>
-     <p class="item__people">Mary Tompson</p>
-  <p class="item__occupation">Ceo of Dribbble</a>
-    </div>
-    
-<div class="item">
-      <div class="item__content">
-      <img class="item__img" src="https://www.hrexaminer.com/wp-content/uploads/2016/10/2016-10-11-hrexaminer-stackoverflow-6-xxl-sq-250px.png" alt="Stackoverflow"><span class="item__name">stackoverflow</span>
-      <p class="item__description">
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-      </p>
-        </div>
-      <div class="item__avatar"></div>
-      <p class="item__people">Andrew Palmer</p>
-  <p class="item__occupation">Ceo of Slack</a>
-    </div>
-
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-<img class="carousel-control__img" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjQ5NCAzMS40OTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjQ5NCAzMS40OTQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPHBhdGggZD0iTTEwLjI3Myw1LjAwOWMwLjQ0NC0wLjQ0NCwxLjE0My0wLjQ0NCwxLjU4NywwYzAuNDI5LDAuNDI5LDAuNDI5LDEuMTQzLDAsMS41NzFsLTguMDQ3LDguMDQ3aDI2LjU1NCAgYzAuNjE5LDAsMS4xMjcsMC40OTIsMS4xMjcsMS4xMTFjMCwwLjYxOS0wLjUwOCwxLjEyNy0xLjEyNywxLjEyN0gzLjgxM2w4LjA0Nyw4LjAzMmMwLjQyOSwwLjQ0NCwwLjQyOSwxLjE1OSwwLDEuNTg3ICBjLTAuNDQ0LDAuNDQ0LTEuMTQzLDAuNDQ0LTEuNTg3LDBsLTkuOTUyLTkuOTUyYy0wLjQyOS0wLjQyOS0wLjQyOS0xLjE0MywwLTEuNTcxTDEwLjI3Myw1LjAwOXoiIGZpbGw9IiM2Zjc5ZmYiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
-
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <img class="carousel-control__img" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjQ5IDMxLjQ5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMS40OSAzMS40OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8cGF0aCBkPSJNMjEuMjA1LDUuMDA3Yy0wLjQyOS0wLjQ0NC0xLjE0My0wLjQ0NC0xLjU4NywwYy0wLjQyOSwwLjQyOS0wLjQyOSwxLjE0MywwLDEuNTcxbDguMDQ3LDguMDQ3SDEuMTExICBDMC40OTIsMTQuNjI2LDAsMTUuMTE4LDAsMTUuNzM3YzAsMC42MTksMC40OTIsMS4xMjcsMS4xMTEsMS4xMjdoMjYuNTU0bC04LjA0Nyw4LjAzMmMtMC40MjksMC40NDQtMC40MjksMS4xNTksMCwxLjU4NyAgYzAuNDQ0LDAuNDQ0LDEuMTU5LDAuNDQ0LDEuNTg3LDBsOS45NTItOS45NTJjMC40NDQtMC40MjksMC40NDQtMS4xNDMsMC0xLjU3MUwyMS4yMDUsNS4wMDd6IiBmaWxsPSIjNmY3OWZmIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
- 
-  </a>
-</div>
-    
-  </div>
-  
-  
-
-</div>
-</div>
-</div>
-
-<div class="sect sect--white sect--no-padding">
-<div class="container">
-  <div class="row row--center">
-    <div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/mOtHRw/fblogo.png">
-      </a>
-    </div>
-    
-<div class="col-md-3  col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/nfpXRw/twitterlogo.png">
-      </a>
-    </div>
-    
-    
-<div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/imgOYb/googlelogo.png">
-      </a>
-    </div>
-    
-<div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/ebGAeG/dribbblelogo.png">
-      </a>
-    </div>
-        
-    
-  </div>
-  <div class="row row--center">
-    <div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/npV8Yb/gitlogo.png">
-      </a>
-    </div>
-    
-        <div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/cGyZ6w/stacklogo.png">
-      </a>
-    </div>
-    
-    
-        <div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/ij03zG/inlogo.png">
-      </a>
-    </div>
-    
-        <div class="col-md-3 col-xs-6 col-sm-6 partner">
-      <a href="#" class="partner__link">
-      <img class="partner_img" src="https://image.ibb.co/ekqdzG/codepenlogo.png">
-      </a>
-    </div>
-  </div>
-</div>    
-</div>
 
 <div class="sect sect--white">
 <div class="container">
@@ -357,7 +62,7 @@
   
   <div class="row row--margin">
     <div class="col-md-6 article-pre__col">
-      <a href="SI&SU.jsp" class="article-pre ">
+      <a href="Maps.jsp" class="article-pre ">
         <div class="article-pre__img article-pre__img--first"></div>
         <h2 class="article-pre__info">
           <span class="article-pre__cat">Smart City Solutions Providers • </span><span class="article-pre__aut"> Cisco, Siemens, IBM</span> <span class="article-pre__date"> - 5 mins read</span>
@@ -398,86 +103,124 @@
     </div>     
   </div>
 </div>
+
 </div>
 
-<div class="sect sect--padding-bottom">
+<div class="sect sect--white">
   <div class="container">
     <div class="row">
-     <h1 class="row__title">
-    Contact Us </h1>
-  <h2 class="row__sub">Feel free to ask any questions</h2>
+      <h1 class="row__title">Smart City Public Services</h1>
+      <h2 class="row__sub">services for residents and visitors</h2>
     </div>
+
     <div class="row row--margin">
-      <div class="col-md-1"></div>
-      <div class="col-md-4">
-        <div class="contacts">
-          <a href="#" class="contacts__link"><img src="https://image.ibb.co/kcVou6/path3000.png"><h1 class="contacts_title-ag">City<span class="contacts--light"> Tech</span></h1></a>
-          <p class="contacts__address">
-            Vijayawada<br>
-            Andhra Pradesh<br>
-            India
-          </p>
-          <p class="contacts__info">
-            tel. <a href="#" class="contacts__info-link">+91 7569628423</a>
-          </p>
-          <p class="contacts__info">
-            m. <a href="#"class="contacts__info-link">info@citytech.io</a>
-          </p>
-        </div>
+      <div class="col-md-6 article-pre__col">
+        <a href="Map1.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--health"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Healthcare Services • </span><span class="article-pre__aut"> Apollo, Fortis, AIIMS</span><span class="article-pre__date"> - 3 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Modern healthcare facilities with online consultation and bookings.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
       </div>
-      <div class="col-md-6">
-  <form id="contact" class="form" action="/mail/send" method="POST">
-    <div class="form-group">
-      <select class="form__field form__select" name="topic" required>
-        <option selected value>Choose topic*</option>
-        <option value="1">Pricing</option>
-        <option value="2">About Site</option>
-      </select>
-    </div>
-    
-    <div class="form-group">
-      <div class="form__field--half">
-        <input type="text" name="name" placeholder="Name*" class="form__field form__text" required>
-      </div>
-      <div class="form__field--half">
-        <input type="text" name="surname" placeholder="Surname" class="form__field form__text">
+
+      <div class="col-md-6 article-pre__col">
+        <a href="Map1.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--education"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Education Services • </span><span class="article-pre__aut"> Byju’s, Unacademy, EdX</span><span class="article-pre__date"> - 4 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Smart education platforms and institutions for a connected future.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
       </div>
     </div>
 
-    <div class="form-group">
-      <div class="form__field--half">
-        <input type="email" name="email" placeholder="Email address*" class="form__field form__text" required>
+    <div class="row">
+      <div class="col-md-6 article-pre__col">
+        <a href="Map1.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--emergency"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Emergency Services • </span><span class="article-pre__aut"> 108, Fire Brigade</span><span class="article-pre__date"> - 2 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Quick access to emergency helplines and disaster management.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
       </div>
-      <div class="form__field--half">
-        <input type="text" name="phone" placeholder="Phone number" class="form__field form__text">
-      </div>
-    </div>
 
-    <div class="form-group">
-      <textarea name="message" placeholder="Your message*" class="form__field form__textarea" required></textarea>
-      <button class="btn btn--up btn--width" type="submit">Submit</button>
-    </div>
-  </form>
-</div>
-   
-<div class="col-md-1"></div>
+      <div class="col-md-6 article-pre__col">
+        <a href="Map1.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--waste"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Waste Management • </span><span class="article-pre__aut"> CleanCity, EcoWaste</span><span class="article-pre__date"> - 3 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Efficient waste collection and recycling initiatives.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="sect sect--violet ">
-  <img src="https://image.ibb.co/fWyVtb/path3762.png" class="career-img">
+<div class="sect sect--white">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h1 class="career_title">Oh! Your have digged our website in search for the service of our Website?</h1>
-        <h1 class="career_sub">We will pleased to have you onboard! Check Out our MAP.</h1>
-        <a href="#" class="btn btn--white btn--width">Top</a>
+      <h1 class="row__title">Smart Living & Lifestyle</h1>
+      <h2 class="row__sub">enhancing quality of life</h2>
+    </div>
+
+    <div class="row row--margin">
+      <div class="col-md-6 article-pre__col">
+        <a href="Map2.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--housing"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Smart Housing • </span><span class="article-pre__aut"> Prestige, Sobha, Brigade</span><span class="article-pre__date"> - 4 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Affordable, connected, and sustainable housing.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
+      </div>
+
+      <div class="col-md-6 article-pre__col">
+        <a href="Map2.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--shopping"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Retail & Shopping • </span><span class="article-pre__aut"> Flipkart, Amazon</span><span class="article-pre__date"> - 5 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">E-commerce and smart shopping centers.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
       </div>
     </div>
   </div>
-  
 </div>
+
+<div class="sect sect--white">
+  <div class="container">
+    <div class="row">
+      <h1 class="row__title">Transport & Infrastructure</h1>
+      <h2 class="row__sub">building smarter cities</h2>
+    </div>
+
+    <div class="row row--margin">
+      <div class="col-md-6 article-pre__col">
+        <a href="Maps3.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--metro"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Smart Metro & Rail • </span><span class="article-pre__aut"> BMRCL, DMRC</span><span class="article-pre__date"> - 3 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Efficient public transportation systems.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
+      </div>
+
+      <div class="col-md-6 article-pre__col">
+        <a href="Maps3.html" class="article-pre">
+          <div class="article-pre__img article-pre__img--parking"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">Smart Parking • </span><span class="article-pre__aut"> ParkEasy, SmartPark</span><span class="article-pre__date"> - 4 mins read</span>
+          </h2>
+          <h1 class="article-pre__title">Automated parking management systems.<span class="article-pre__arrow--purple"> →</span></h1>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <footer class="footer">
   <div class="container">
@@ -1566,47 +1309,6 @@ margin-top: 0;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Include Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Initialize Carousel -->
-<script>
-  $(document).ready(function () {
-    $("#myCarousel").carousel({
-      interval: false
-    });
-  });
-  
-  
-
-  document.addEventListener("DOMContentLoaded", function () {
-	    const carouselWrapper = document.querySelector('.carousel__wrapper');
-	    const slides = document.querySelectorAll('.carousel__slide');
-	    const prevBtn = document.querySelector('.carousel__btn--prev');
-	    const nextBtn = document.querySelector('.carousel__btn--next');
-
-	    let currentIndex = 0;
-
-	    function updateCarousel() {
-	      const offset = -currentIndex * 100;
-	      carouselWrapper.style.transform = `translateX(${offset}%)`;
-	    }
-
-	    prevBtn.addEventListener('click', () => {
-	      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-	      updateCarousel();
-	    });
-
-	    nextBtn.addEventListener('click', () => {
-	      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-	      updateCarousel();
-	    });
-
-	    // Optional: Auto-play functionality
-	    setInterval(() => {
-	      nextBtn.click();
-	    }, 5000); // Change slide every 5 seconds
-	  });
-
-
-</script>
 
 </body>
 </html>

@@ -28,13 +28,36 @@
   <div class="header__menu">
     <nav id="navbar" class="header__nav collapse">
       <ul class="header__elenco">
-        <li class="header__el"><a href="#" class="header__link">Home</a></li>
-        <li class="header__el"><a href="#" class="header__link">Pricing</a></li>
-        <li class="header__el"><a href="#" class="header__link">Services</a></li>
-        <li class="header__el"><a href="Adminlogin.jsp" class="header__link">Admin</a></li>
-        <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
-        <li class="header__el header__el--blue"><a href="Register.jsp" class="btn btn--white">Sign In →</a></li>
-      </ul>
+       <li class="header__el"><a href="#" class="header__link button">Home</a></li>
+<li class="header__el"><a href="pricing.jsp" class="header__link button">Plans</a></li>
+<li class="header__el"><a href="#" class="header__link button">Services</a></li>
+<li class="header__el"><a href="Adminlogin.jsp" class="header__link button">Admin</a></li>
+<li class="header__el"><a href="#" class="header__link button">Contact us</a></li>
+
+  <div class="menu">
+    <div class="item">
+      <a href="#" class="link">
+        <span>Get Started</span>
+        <svg viewBox="0 0 360 360" xml:space="preserve">
+          <g id="SVGRepo_iconCarrier">
+            <path
+              id="XMLID_225_"
+              d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+            ></path>
+          </g>
+        </svg>
+      </a>
+      <div class="submenu">
+        <div class="submenu-item">
+          <a href="Register.jsp" class="submenu-link">Sign Up</a>
+        </div>
+        <div class="submenu-item">
+          <a href="Login.jsp" class="submenu-link">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>      </ul>
     </nav>
   </div>
     </div>
@@ -1562,6 +1585,171 @@ margin-top: 0;
   background-color: #0056b3;
 }
 
+.menu {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  width: fit-content;
+  display: flex;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.menu .link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 36px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a3cff;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link svg {
+  width: 14px;
+  height: 14px;
+  fill: #000000;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .item {
+  position: relative;
+}
+
+.menu .item .submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  border-radius: 0 0 16px 16px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+  pointer-events: none;
+  list-style: none;
+}
+
+.menu .item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  border-top: transparent;
+  border-color: #0a3cff;
+}
+
+.menu .item:hover .link {
+  color: #ffffff;
+  border-radius: 16px 16px 0 0;
+}
+
+.menu .item:hover .link::after {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.menu .item:hover .link svg {
+  fill: #ffffff;
+  transform: rotate(-180deg);
+}
+
+.submenu .submenu-item {
+  width: 100%;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-item:last-child .submenu-link {
+  border-bottom: none;
+}
+
+.submenu .submenu-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  width: 100%;
+  height: 100%;
+  background-color: #0a3cff;
+  z-index: -1;
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.submenu .submenu-link:hover {
+  color: #ffffff;
+}
+
+/* Basic button style */
+.header__link.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;  /* Green background for example */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect with scale and color change */
+.header__link.button:hover {
+  transform: scale(1.1);  /* Slightly increases the size */
+  background-color: #45a049;  /* Darker green on hover */
+}
+
+/* Blue link special style (if needed) */
+.header__el--blue .header__link.button {
+  background-color: #1E90FF;  /* Example blue background */
+}
+
+.header__el--blue .header__link.button:hover {
+  background-color: #1C86EE;  /* Darker blue on hover */
+}
 
 </style>
 <!-- Include jQuery -->

@@ -149,22 +149,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function generateQRCode() {
-            const upiID = "9346339305@ibl"; // UPI ID of the recipient
-            const amount = "2.00"; // Amount to pay
-            const name = "Recipient Name"; // Display name of the recipient (optional)
+    function generateQRCode() {
+        const upiID = "9346339305@ibl"; // UPI ID of the recipient
+        const amount = "20.00"; // Amount to pay
+        const name = "Recipient Name"; // Display name of the recipient (optional)
 
-            // Create the UPI deep link
-            const upiLink = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+        // Create the UPI deep link using string concatenation
+        const upiLink = "upi://pay?pa=" + upiID + "&pn=" + encodeURIComponent(name) + "&am=" + amount + "&cu=INR";
 
-            // Generate the QR Code
-            const qrContainer = document.getElementById("qr-code-container");
-            qrContainer.innerHTML = ""; // Clear any existing QR code
-            const qrCode = qrcode(0, "L");
-            qrCode.addData(upiLink);
-            qrCode.make();
-            qrContainer.innerHTML = qrCode.createImgTag(4); // Append the generated QR code as an image
-        }
+        // Generate the QR Code
+        const qrContainer = document.getElementById("qr-code-container");
+        qrContainer.innerHTML = ""; // Clear any existing QR code
+        const qrCode = qrcode(0, "L");
+        qrCode.addData(upiLink);
+        qrCode.make();
+        qrContainer.innerHTML = qrCode.createImgTag(4); // Append the generated QR code as an image
+
+        // Simulate payment success (in a real scenario, you'd handle this from the payment gateway)
+        // For now, we'll assume payment is successful and redirect to userhome.jsp
+        setTimeout(function() {
+            // Redirect to the user home page after successful payment
+            window.location.href = "userhome.jsp";
+        }, 5000); // Redirect after 3 seconds (or based on actual payment response)
+    }
+
     </script>
 </body>
 
